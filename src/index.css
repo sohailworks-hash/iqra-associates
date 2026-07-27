@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-white font-sans text-ink-700 antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display text-ink-950;
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    @apply bg-brand-500/20 text-brand-900;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white shadow-soft hover:bg-brand-700 hover:shadow-glow active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply btn border border-ink-200 bg-white text-ink-800 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700 active:scale-[0.98];
+  }
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-white shadow-soft hover:bg-[#1ebe5d] active:scale-[0.98];
+  }
+  .card {
+    @apply rounded-3xl border border-ink-100 bg-white shadow-card transition-all duration-300;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-700;
+  }
+  .section-title {
+    @apply font-display text-3xl font-bold text-ink-950 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1];
+  }
+}
+
+/* Reveal-on-scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(120deg, #1d61f1 0%, #3380fc 50%, #59a3ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(29, 97, 241, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(29, 97, 241, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Mesh hero glow */
+.bg-mesh {
+  background-color: #f6f9ff;
+  background-image:
+    radial-gradient(at 12% 18%, rgba(51, 128, 252, 0.18) 0px, transparent 50%),
+    radial-gradient(at 88% 8%, rgba(89, 163, 255, 0.16) 0px, transparent 45%),
+    radial-gradient(at 75% 92%, rgba(29, 97, 241, 0.12) 0px, transparent 50%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #eef2f7; }
+::-webkit-scrollbar-thumb { background: #c2cee0; border-radius: 999px; border: 2px solid #eef2f7; }
+::-webkit-scrollbar-thumb:hover { background: #9baccb; }
