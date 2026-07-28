@@ -27,6 +27,7 @@
       color: #1e293b;
       line-height: 1.6;
       overflow-x: hidden;
+      position: relative;
     }
 
     /* Top Utility Bar */
@@ -493,52 +494,38 @@
       border-top: 1px solid #0f172a;
     }
 
-    /* 🔥 FLOATING ACTION BUTTONS 🔥 */
+    /* 🔥 FIXED FLOATING BUTTONS CSS 🔥 */
     .floating-buttons {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 9999;
+      position: fixed !important;
+      bottom: 25px !important;
+      right: 25px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 15px !important;
+      z-index: 999999 !important;
     }
     .float-btn {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 24px;
-      text-decoration: none;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: pulse 2s infinite;
+      width: 58px !important;
+      height: 58px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: #ffffff !important;
+      font-size: 26px !important;
+      text-decoration: none !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+      transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     }
     .float-wa {
-      background-color: #25d366;
+      background-color: #25d366 !important;
     }
     .float-call {
-      background-color: #2563eb;
-      animation-delay: 1s;
+      background-color: #2563eb !important;
     }
     .float-btn:hover {
-      transform: scale(1.15) translateY(-3px);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
-      }
-      70% {
-        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
+      transform: scale(1.15) translateY(-4px) !important;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4) !important;
     }
 
     /* Responsive Mobile CSS */
@@ -561,8 +548,8 @@
       .hero h1 { font-size: 32px; }
       .hero p { font-size: 16px; }
       .about-container { grid-template-columns: 1fr; }
-      .floating-buttons { bottom: 20px; right: 20px; gap: 12px; }
-      .float-btn { width: 50px; height: 50px; font-size: 22px; }
+      .floating-buttons { bottom: 20px !important; right: 20px !important; gap: 12px !important; }
+      .float-btn { width: 50px !important; height: 50px !important; font-size: 22px !important; }
     }
   </style>
 </head>
@@ -773,7 +760,7 @@
     </div>
   </section>
 
-  <!-- 🔥 FLOATING ACTION BUTTONS 🔥 -->
+  <!-- 🔥 FLOATING BUTTONS HTML 🔥 -->
   <div class="floating-buttons">
     <a href="https://wa.me/9998199538?text=Hello%20IQRA%20Associates,%20I%20need%20tax%20consultation." target="_blank" class="float-btn float-wa" title="Chat on WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
