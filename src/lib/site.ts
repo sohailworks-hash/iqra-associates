@@ -21,5 +21,14 @@ export const SITE = {
   founded: 2014,
 };
 
+export const NAV_LINKS = [
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "GST Filing", href: "#gst" },
+  { label: "Income Tax", href: "#income-tax" },
+  { label: "About Us", href: "#about" },
+  { label: "Contact", href: "#contact" },
+];
+
 export const whatsappLink = (message: string) =>
   `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(message)}`;
